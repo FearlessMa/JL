@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  var m=null;
+  var n=null;
+  $.ajax({
+    url:'php/selectNavList.php',
+    type:'get',
+    success:function(data){
+      console.log(data);
+      data.navList=data.navList[0];
+      var l=data.content;
+      var s={};
+      for(var i=0;i< l.length;i++ ){
+        l[i].details=JSON.parse(l[i].details);
+        s[l[i].name]=l[i];
+      }
+      data.content=s;
+      m=data;
+      console.log(data);
+    },
+    error:function(err){
+      console.log(err);
+    }
+  });
+//
+//  $.ajax({
+//    url:'php/selectContent.php',
+//    type:'get',
+//    success:function(data){
+//      n=data;
+//      console.log(data);
+//    },
+//    error:function(err){
+//      console.log(err);
+//    }
+//  });
+
+//  $.mhc={};
+//  $.mhc.dAjax=function(url,succ){
+//    $.ajax({
+//      url:url,
+//      type:'get',
+//      success:succ.call(),
+//      error:function(err){
+//        console.log(err);
+//      }
+//    });
+//  }
+//$.mhc.dAjax('php/selectContent.php',)
+</script>
+</body>
+</html>

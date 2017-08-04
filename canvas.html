@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <style>
+    body{
+      text-align: center;
+    }
+    canvas{
+      background: #aaa;
+
+    }
+  </style>
+</head>
+<body>
+
+<canvas id='c1' width="140" height="140"></canvas>
+<canvas id='c2' width="140" height="140"></canvas>
+<canvas id='c3' width="140" height="140"></canvas>
+<canvas id='c4' width="140" height="140"></canvas>
+
+
+<script src="js/jquery-1.11.3.js"></script>
+<script>
+  function canvasSkill(id,num){
+    var cid=$('#'+id)[0];
+    var ctx=cid.getContext('2d');
+    ctx.beginPath();
+    ctx.arc(70,70,60,0,2*Math.PI);
+    ctx.strokeStyle = '#afa';
+    ctx.lineWidth = 8;
+    ctx.stroke();
+    var start = -Math.PI/2;
+    var deg = 0; //进度环前进的角度
+    console.log((2*Math.PI*num/100).toFixed(1));
+    var timer = setInterval(function(){
+      ctx.beginPath();  //注意此处！
+      deg += 1;
+      ctx.arc(70,70,60,start, start+deg*Math.PI/180);
+      ctx.strokeStyle = '#FF5252';
+      ctx.stroke();
+      console.log((deg*Math.PI/180).toFixed(1));
+      if((deg*Math.PI/180).toFixed(1)==(2*Math.PI*num/100).toFixed(1)){
+        clearInterval(timer);
+      }
+    },10);
+    ctx.textBaseline = 'top';
+    ctx.font = '40px SimHei';
+    ctx.fillStyle = '#f00';
+    var txt=0;
+    var w = ctx.measureText(txt+"%").width;
+    ctx.fillText(txt+"%", 40, 50);
+    var timer1=setInterval(function(){
+      ctx.clearRect(40,50, w, 40);
+      txt+=1;
+      w = ctx.measureText(txt+"%").width;
+      ctx.fillText(txt+"%", 40, 50);
+      if(txt==num){
+        clearInterval(timer1)
+      }
+    },20);
+  };
+
+  canvasSkill('c1',80);
+  canvasSkill('c2',65);
+  canvasSkill('c3',85);
+  canvasSkill('c4',95);
+</script>
+</body>
+</html>

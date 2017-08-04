@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .father{
+            width: 400px;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        .div-absolute{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+        }
+        .div-absolute:hover{
+            background: rgba(255,255,255,.3);
+
+        }
+        .div-topLine{
+            border-bottom:1px solid transparent ;
+            width: 56%;
+            position: absolute;
+            left: 22%;
+            top: 10%;
+            transition: all .5s linear;
+        }
+        .div-absolute:hover .div-topLine{
+            border-color: #afa;
+            top: 20%;
+        }
+        .div-bottomLine{
+            border-bottom:1px solid transparent ;
+            width: 56%;
+            position: absolute;
+            left: 22%;
+            top: 90%;
+            transition: all .5s linear;
+        }
+        .div-absolute:hover .div-bottomLine{
+            border-color: #afa;
+            top: 80%;
+        }
+        .div-leftLine{
+            border-left:1px solid transparent ;
+            height: 50%;
+            position: absolute;
+            left: 10%;
+            top: 25%;
+            transition: all .5s linear;
+        }
+        .div-absolute:hover .div-leftLine{
+            border-color: #afa;
+            left: 20%;
+        }
+        .div-rightLine{
+            border-left:1px solid transparent ;
+            height: 50%;
+            position: absolute;
+            left: 90%;
+            top: 25%;
+            transition: all .5s linear;
+        }
+        .div-absolute:hover .div-rightLine{
+            border-color: #afa;
+            left: 80%;
+        }
+        .div-title{
+            position: absolute;
+            top: 25%;
+            left: 20%;
+            width: 60%;
+            height: 50%;
+            /*background: #afa;*/
+            color: transparent;
+            text-align: center;
+            transition:all .5s linear;
+        }
+        h3{
+        }
+        .div-absolute:hover .div-title{
+            color: #000;
+        }
+        .img-moved{
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all .3s linear;
+        }
+        .father:hover .img-moved{
+            top: -5%;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="">
+            <img class="img-moved" src="img/item-1.jpg" />
+        </div>
+        <div class="div-absolute">
+            <div class="div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+                <h3>123</h3>
+                <p>this is a p</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

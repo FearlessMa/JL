@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+  <link rel="stylesheet" href="myCss/main.css"/>
+</head>
+<style>
+  .moveTop{
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    position:fixed;
+    top: 90%;
+    left: 95%;
+    z-index: 2;
+    border: 1px solid rgba(0,0,0,.3) ;
+    /*background: #afa;*/
+    font-size: 1.5em;
+    text-align: center;
+    /*color: #BFBFBF;*/
+  }
+  .moveTop:hover{
+    border: 1px solid transparent ;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+  }
+</style>
+<body>
+<div class="navbar navbar-fixed-top navbar-default">
+  <div class="container">
+    <!--导航条头部-->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">我的简历</a>
+      <a class="navbar-toggle" data-toggle="collapse" href="#myMenu">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+    </div>
+    <!--导航条折叠部分-->
+    <div id="myMenu" class="navbar-collapse collapse">
+      <ul id="topList" class="nav navbar-nav ">
+        <li class="active"><a href="#myIntroduce">主页</a></li>
+        <li><a href="#myWorks">作品</a></li>
+        <li><a href="#mySkill">技能</a></li>
+        <li><a href="#myWork">求职意向</a></li>
+        <li><a href="#mySelf">自我评价</a></li>
+      </ul>
+      <!--导航条注册-->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">注册</a></li>
+        <li><a href="#">登陆</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+<!--返回顶部-->
+
+  <!--<div class="moveTop">-->
+    <a class="moveTop" href="#">
+      <span class="glyphicon glyphicon-arrow-up"></span>
+    </a>
+  <!--</div>-->
+<section id="myIntroduce" class="bg-oneDiv mg-top-default ">
+  <div class="container">
+    <!-- 自我介绍 我的主页-->
+    <div class="row">
+      <div class="col-xs-offset-3 col-xs-6 text-center">
+        <div class="animated fadeInDownBig">
+          <h2 >自我介绍</h2>
+          <div class="div-line "></div>
+          <p class="pg-bottom-default">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad aliquam aliquid culpa doloremque eius est hic incidunt iusto molestiae, nulla obcaecati odio perferendis quidem quod reprehenderit sint vel!</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="div-box text-center animated slideInLeft">
+          <div>
+            <span class="glyphicon glyphicon-camera "></span>
+          </div>
+          <h4>1</h4>
+          <p>123</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="div-box text-center animated slideInDown">
+          <div>
+            <span class="glyphicon glyphicon-book "></span>
+            <span class="glyphicon glyphicon-user "></span>
+            <span class="glyphicon glyphicon-map-marker "></span>
+            <span class="glyphicon glyphicon-star "></span>
+          </div>
+          <h4>1</h4>
+          <p>123</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="div-box text-center animated slideInUp">
+          <div>
+            <span class="glyphicon glyphicon-stats "></span>
+          </div>
+          <h4>1</h4>
+          <p>123</p>
+        </div>
+      </div>
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <div class="div-box text-center animated slideInRight">
+          <div>
+            <span class="glyphicon glyphicon-user "></span>
+          </div>
+          <h4>1</h4>
+          <p>123</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section  id="myWorks" class="bg-towDiv">
+  <div class="container">
+    <!--我的作品-->
+    <div class="row">
+      <div class="col-xs-offset-3 col-xs-6 text-center">
+        <div  class="animated">
+          <h2>我的作品</h2>
+          <div class="div-line"></div>
+          <p class="pg-bottom-default">
+            <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus accusantium ad aliquam aliquid culpa doloremque eius est hic incidunt iusto molestiae, nulla obcaecati odio perferendis quidem quod reprehenderit sint vel!</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="img-divRow animated ">
+          <div>
+            <img  src="img/item-1.jpg" alt="01"/>
+          </div>
+          <!--四条线-->
+          <div class="div-absolute">
+            <div class="div-lineBase div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+              <h3>123</h3>
+              <p>this is a p</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="img-divRow animated ">
+          <img class="img-moved" src="img/item-2.jpg" alt="02"/>
+          <div class="div-absolute">
+            <div class="div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+              <h3>123</h3>
+              <p>this is a p</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="img-divRow animated ">
+          <img class="img-moved" src="img/item-3.jpg" alt="03"/>
+          <div class="div-absolute">
+            <div class="div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+              <h3>123</h3>
+              <p>this is a p</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-4">
+        <div class="img-divRow animated ">
+          <img class="img-moved" src="img/item-4.jpg" alt="04"/>
+          <div class="div-absolute">
+            <div class="div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+              <h3>123</h3>
+              <p>this is a p</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="img-divRow animated ">
+          <img class="img-moved" src="img/item-5.jpg" alt="05"/>
+          <div class="div-absolute">
+            <div class="div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+              <h3>123</h3>
+              <p>this is a p</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-12 col-md-4">
+        <div class="img-divRow animated ">
+          <img class="img-moved" src="img/item-6.jpg" alt="06"/>
+          <div class="div-absolute">
+            <div class="div-topLine"></div>
+            <div class="div-bottomLine"></div>
+            <div class="div-leftLine"></div>
+            <div class="div-rightLine"></div>
+            <div class="div-title">
+              <h3>123</h3>
+              <p>this is a p</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/jquery-1.11.3.js"></script>
+<script src="myJs/myAccordion.js"></script>
+<script>
+//  jQuery.fn.toggleActive=function(elem){
+////    console.log(elem);
+//    var $fatherElems=elem.parent().siblings();
+////    elem.parent().parent().parent().removeClass('in');
+//    $fatherElems.removeClass('active');
+//    elem.parent().addClass('active');
+//  };
+ $(window).scroll(function(){
+   var myIntroduce=$('#myIntroduce').offset().top;
+   var myWorks=$('#myWorks').offset().top;
+   var sTop=$('body').scrollTop();
+   if(sTop<myWorks&&sTop>myIntroduce){
+     $.fn.toggleActive($('a[href="#myIntroduce"]'));
+   }
+   if(sTop>=myWorks){
+//     console.log(myWorks);
+//     console.log(sTop);
+     var toggleli=$('a[href="#myWorks"]');
+     console.log(toggleli);
+     $.fn.toggleActive(toggleli);
+//     alert(123);
+    var a1= $('#myWorks div[class="animated"]');
+//     fadeInUp
+     a1.addClass('fadeInUp');
+     var a2= $('#myWorks div[class*="img-divRow animated"]:even');
+     a2.addClass('slideInLeft');
+//     console.log(a1);
+     var a3= $('#myWorks div[class*="img-divRow animated"]:odd');
+     a3.addClass('slideInRight');
+//     console.log(a2);
+//     console.log(a3);
+   }
+ });
+</script>
+</body>
+</html>
